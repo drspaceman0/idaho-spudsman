@@ -5,6 +5,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Navbar from "../components/Navbar.js";
+import Sidebar from "../components/Sidebar.js";
 import ArticleCard from "../components/ArticleCard.js";
 import FeaturedArticleCard from "../components/FeaturedArticleCard.js";
 
@@ -44,10 +45,7 @@ var Home = () => {
               </Container>
             </Grid>
             <Grid item xs={12} sm={3} sx={{ borderLeft: "1px solid black" }}>
-              {/* sidebar */}
-              <Paper className="paper">temp</Paper>
-              <Paper className="paper">temp</Paper>
-              <Paper className="paper">temp</Paper>
+              <Sidebar />
             </Grid>
           </Grid>
         </Container>
