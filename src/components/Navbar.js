@@ -10,6 +10,9 @@ import Tab from "@mui/material/Tab";
 
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
+
+import { Link } from "gatsby";
+
 import Logo from "../images//idaho_spudsman_logo.svg";
 
 const pages = [
@@ -53,7 +56,19 @@ const Navbar = () => {
               {/* <MenuIcon /> */}
             </IconButton>
           </Box>
-          <img src={Logo} alt="Idaho Spudsman Logo" />
+          <Link to="/">
+            <Container disableGutters sx={{
+              p: 0, m: 0,
+              transition: 'opacity 0.2s',
+              opacity: '1',
+              '&:hover': {
+                opacity: '0.7'
+              },
+            }}>
+              <img src={Logo} alt="Idaho Spudsman Logo" />
+            </Container>
+          </Link>
+
           <Box>
             <IconButton color="primary">
               <SearchIcon />
