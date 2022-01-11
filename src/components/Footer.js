@@ -15,15 +15,15 @@ import { Link } from "gatsby";
 const socialMedias = [
     {
         href: "https://twitter.com/ISpudsman",
-        icon: <TwitterIcon />
+        icon: <TwitterIcon color="primary" />
     },
     {
         href: "#",
-        icon: <FacebookIcon />
+        icon: <FacebookIcon color="primary" />
     },
     {
         href: "https://github.com/drspaceman0",
-        icon: <GitHubIcon />
+        icon: <GitHubIcon color="primary" />
     },
 ];
 
