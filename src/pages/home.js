@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-// import * as contentful from "contentful";
-import Paper from "@mui/material/Paper";
+// import * as contentful from "contentful"; 
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Navbar from "../components/Navbar.js";
@@ -29,28 +28,26 @@ var Home = () => {
   }
 
   return (
-    <>
-      <Container disableGutters maxWidth="lg">
-        <Navbar />
-        <Container sx={{ px: { xs: 1, md: 8 } }}>
-          <Grid container>
-            <Grid item xs={12} sm={9}>
-              <Container>
-                <Grid container spacing={3} sx={{ mt: 0 }}>
-                  <FeaturedArticleCard post={articles[0]} xs={12} sm={12} />
-                  {articles.slice(1).map((post, index) => (
-                    <ArticleCard key={index} post={post} xs={12} sm={6} />
-                  ))}
-                </Grid>
-              </Container>
-            </Grid>
-            <Grid item xs={12} sm={3}>
-              <Sidebar />
-            </Grid>
+    <Container maxWidth="lg">
+      <Navbar />
+      <Container sx={{ px: { xs: 1, md: 6 } }}>
+        <Grid container>
+          <Grid item xs={12} sm={8}>
+            <Container>
+              <Grid container spacing={3} sx={{ mt: 0 }}>
+                <FeaturedArticleCard post={articles[0]} xs={12} sm={12} />
+                {articles.slice(1).map((post, index) => (
+                  <ArticleCard key={index} post={post} xs={12} sm={6} />
+                ))}
+              </Grid>
+            </Container>
           </Grid>
-        </Container>
+          <Grid item xs={12} sm={4}>
+            <Sidebar />
+          </Grid>
+        </Grid>
       </Container>
-    </>
+    </Container>
   );
 };
 export default Home;

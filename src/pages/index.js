@@ -55,11 +55,17 @@ const theme = createTheme({
 var IndexPage = () => {
   let myTheme = responsiveFontSizes(theme);
   return (
-    <React.Fragment>
+    <>
+      <style>{`
+         body{
+           margin: 0px;
+           padding: 0px;
+          }
+          `}</style>
       <ThemeProvider theme={myTheme}>
         <Home />
       </ThemeProvider>
-    </React.Fragment>
+    </>
   );
 };
 export default IndexPage;

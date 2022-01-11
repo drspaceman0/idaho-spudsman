@@ -1,5 +1,6 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
@@ -19,65 +20,73 @@ const myArticle = {
   imageText: "main image description",
 };
 
+const socialMedias = [
+  {
+    href: "https://twitter.com/ISpudsman",
+    icon: <TwitterIcon />
+  },
+  {
+    href: "#",
+    icon: <FacebookIcon />
+  },
+  {
+    href: "https://github.com/drspaceman0",
+    icon: <GitHubIcon />
+  },
+];
+
 const tempArticles = Array(8).fill(myArticle);
+
+
 
 function Sidebar(props) {
   const [popularArticles, setPopularArticles] = useState(tempArticles);
   return (
-    <>
-      <SocialMediaLinks />
+    <aside id="sidebar">
+      <Container disableGutters sx={{ pt: 2, pl: 2 }}>
+        <Stack direction="row" spacing={2}>
 
+          {/* social media links  */}
+          {
+            socialMedias.map((item, index) => (
+              <Link
+                display="block"
+                href={item.href}
+                sx={{ mb: 0.5 }}
+              >
+                {item.icon}
+              </Link>
+            ))
+          }
+        </Stack >
 
-      <Typography gutterBottom variant="h6" sx={{
-        px: 0,
-        pt: 0,
-        pb: 0,
-        borderBottom: 3,
-        borderColor: "primary.main",
-      }}>
-        Popular Posts
-      </Typography>
-      {
-        popularArticles.map((post, index) => (
-          <ArticleLinkCard key={index} post={post} xs={12} sm={6} />
-        ))
-      }
-      <a className="twitter-timeline"
-        href="https://twitter.com/ISpudsman"
-        data-chrome="nofooter noborders noheader"
-        data-height="300">
-        Tweets by @TwitterDev
-      </a>
-    </>
+        {/* popular posts  */}
+        <Typography gutterBottom variant="h6" sx={{
+          px: 0,
+          pt: 0,
+          pb: 0,
+          borderBottom: 3,
+          borderColor: "primary.main",
+        }}>
+          Popular Posts
+        </Typography>
+        {
+          popularArticles.map((post, index) => (
+            <ArticleLinkCard key={index} post={post} xs={12} sm={6} />
+          ))
+        }
+
+        {/* twitter widget lmao */}
+        <a className="twitter-timeline"
+          href="https://twitter.com/ISpudsman"
+          data-chrome="nofooter noborders noheader"
+          data-height="300">
+          Tweets by @TwitterDev
+        </a>
+      </Container>
+    </aside>
   );
 }
 
-function SocialMediaLinks() {
-  return (
-    <Stack direction="row" spacing={2}>
-      <Link
-        display="block"
-        href="https://twitter.com/ISpudsman"
-        sx={{ mb: 0.5 }}
-      >
-        <TwitterIcon />
-      </Link>
-      <Link
-        display="block"
-        href="#"
-        sx={{ mb: 0.5 }}
-      >
-        <FacebookIcon />
-      </Link>
-      <Link
-        display="block"
-        href="https://github.com/drspaceman0"
-        sx={{ mb: 0.5 }}
-      >
-        <GitHubIcon />
-      </Link>
-    </Stack >
-  );
-}
 
 export default Sidebar;
