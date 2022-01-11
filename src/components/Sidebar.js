@@ -50,6 +50,7 @@ function Sidebar(props) {
           {
             socialMedias.map((item, index) => (
               <Link
+                key={index}
                 display="block"
                 href={item.href}
                 sx={{ mb: 0.5 }}
