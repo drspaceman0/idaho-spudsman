@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Navbar from "../components/Navbar.js";
 import Sidebar from "../components/Sidebar.js";
+import Footer from "../components/Footer.js";
 import ArticleCard from "../components/ArticleCard.js";
 import FeaturedArticleCard from "../components/FeaturedArticleCard.js";
 
@@ -47,7 +48,8 @@ var Home = () => {
           </Grid>
         </Grid>
       </Container>
-    </Container>
+      <Footer />
+    </Container >
   );
 };
 export default Home;
