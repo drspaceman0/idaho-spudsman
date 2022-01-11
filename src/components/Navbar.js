@@ -24,6 +24,7 @@ const Navbar = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <Toolbar
       disableGutters
@@ -32,6 +33,7 @@ const Navbar = () => {
         alignItems: "center",
         justifyContent: "center",
         boxShadow: "0 0 3 0",
+
       }}
     >
       <Container
@@ -66,7 +68,7 @@ const Navbar = () => {
           <Tab key={index} label={page.title} href={page.url} color="#707070" />
         ))}
       </Tabs>
-    </Toolbar>
+    </Toolbar >
   );
 };
 

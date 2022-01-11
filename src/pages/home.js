@@ -25,7 +25,7 @@ var Home = () => {
   const [articles, setArticles] = useState(tempArticles);
 
   if (!articles) {
-    return "Loading website";
+    return <h2>Loading website</h2>;
   }
 
   return (
@@ -44,7 +44,7 @@ var Home = () => {
                 </Grid>
               </Container>
             </Grid>
-            <Grid item xs={12} sm={3} sx={{ borderLeft: "1px solid black" }}>
+            <Grid item xs={12} sm={3}>
               <Sidebar />
             </Grid>
           </Grid>

@@ -20,7 +20,7 @@ function FeaturedArticleCard(props) {
   }
 
   if (!post) {
-    return "Loading...";
+    return null;
   }
 
   return (

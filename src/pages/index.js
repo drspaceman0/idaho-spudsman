@@ -15,9 +15,6 @@ const theme = createTheme({
     secondary: {
       main: "#0474ba",
     },
-    text: {
-      main: "#000",
-    },
   },
   typography: {
     fontFamily: "Noto Sans",
@@ -33,13 +30,19 @@ const theme = createTheme({
       fontWeight: 700,
       fontSize: "26px",
     },
+    h6: {
+      fontWeight: 600,
+      fontSize: "19px",
+    },
     subtitle1: {
       fontWeight: 500,
       fontSize: "19px",
     },
     subtitle2: {
       fontWeight: 500,
-      fontSize: "17px",
+      fontSize: "14px",
+      p: 0,
+      b: 0
     },
 
     body1: {
@@ -54,7 +57,7 @@ var IndexPage = () => {
   return (
     <React.Fragment>
       <ThemeProvider theme={myTheme}>
-        <Home style={{ margin: 0 }} />
+        <Home />
       </ThemeProvider>
     </React.Fragment>
   );
