@@ -17,7 +17,7 @@ const myArticle = {
   imageText: "main image description",
 };
 
-const tempArticles = Array(8).fill(myArticle);
+const tempArticles = Array(7).fill(myArticle);
 
 var Home = () => {
   //   const [articles, setArticles] = useState(null);

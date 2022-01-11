@@ -50,7 +50,7 @@ const Navbar = () => {
         >
           <Box>
             <IconButton color="primary">
-              <MenuIcon />
+              {/* <MenuIcon /> */}
             </IconButton>
           </Box>
           <img src={Logo} alt="Idaho Spudsman Logo" />
