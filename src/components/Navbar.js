@@ -17,9 +17,9 @@ import Logo from "../images//idaho_spudsman_logo.svg";
 
 const pages = [
   { title: "Home", url: "/" },
-  { title: "Local", url: "#" },
-  { title: "National", url: "#" },
-  { title: "Sports", url: "#" },
+  { title: "Local", url: "/local" },
+  { title: "National", url: "/national" },
+  { title: "Sports", url: "/sports" },
 ];
 
 const Navbar = (props) => {
