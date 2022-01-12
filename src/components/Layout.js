@@ -73,6 +73,12 @@ export default function Layout({
     path = false,
 }) {
     const myTheme = responsiveFontSizes(theme);
+    let myTabVal = 0; // this determines which tab is selected on navbar
+    switch (window.location.pathname) {
+        case '/': myTabVal = 0;
+        case '/article': myTabVal = null;
+    }
+
     return (
         <>
             <style>{`
@@ -83,7 +89,7 @@ export default function Layout({
           `}</style>
             <ThemeProvider theme={myTheme}>
                 <Container maxWidth="lg">
-                    <Navbar />
+                    <Navbar currentTabNum={myTabVal} />
                     <Container sx={{ px: { xs: 1, md: 6 } }}>
                         <main>{children}</main>
                     </Container>

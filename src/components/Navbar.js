@@ -22,10 +22,11 @@ const pages = [
   { title: "Sports", url: "#" },
 ];
 
-const Navbar = () => {
-  const [value, setValue] = useState(0);
+const Navbar = (props) => {
+  let { currentTabNum } = props;
+  const [tabVal, setTabVal] = useState(currentTabNum);
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setTabVal(newValue);
   };
 
   return (
@@ -77,7 +78,7 @@ const Navbar = () => {
         </Container>
 
         <Tabs
-          value={value}
+          value={tabVal}
           onChange={handleChange}
           textColor="primary"
           indicatorColor="primary"
