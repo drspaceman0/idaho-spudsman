@@ -3,7 +3,7 @@ import { useState } from "react";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+import { Link } from "gatsby";
 import ArticleLinkCard from "../components/ArticleLinkCard.js";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -20,18 +20,21 @@ const myArticle = {
   imageText: "main image description",
 };
 
+
+
+
 const socialMedias = [
   {
     href: "https://twitter.com/ISpudsman",
-    icon: <TwitterIcon />
+    icon: <TwitterIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
   },
   {
     href: "#",
-    icon: <FacebookIcon />
+    icon: <FacebookIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
   },
   {
     href: "https://github.com/drspaceman0",
-    icon: <GitHubIcon />
+    icon: <GitHubIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
   },
 ];
 
@@ -51,8 +54,7 @@ function Sidebar(props) {
             socialMedias.map((item, index) => (
               <Link
                 key={index}
-                display="block"
-                href={item.href}
+                to={item.href}
                 sx={{ mb: 0.5 }}
               >
                 {item.icon}

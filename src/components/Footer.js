@@ -15,15 +15,15 @@ import { Link } from "gatsby";
 const socialMedias = [
     {
         href: "https://twitter.com/ISpudsman",
-        icon: <TwitterIcon color="primary" />
+        icon: <TwitterIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
     },
     {
         href: "#",
-        icon: <FacebookIcon color="primary" />
+        icon: <FacebookIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
     },
     {
         href: "https://github.com/drspaceman0",
-        icon: <GitHubIcon color="primary" />
+        icon: <GitHubIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
     },
 ];
 
@@ -55,7 +55,7 @@ function Footer() {
                                 <Link
                                     key={index}
                                     display="block"
-                                    href={item.href}
+                                    to={item.href}
                                     sx={{ mb: 0.5 }}
                                 >
                                     {item.icon}
