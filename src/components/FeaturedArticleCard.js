@@ -49,7 +49,7 @@ function FeaturedArticleCard(props) {
             image="https://source.unsplash.com/random"
             alt=""
           />
-          <Typography variant="body1" sx={{ pt: 2 }}>
+          <Typography variant="body2" sx={{ pt: 2 }}>
             {getPreview(post.preview)}
           </Typography>
         </Card>
