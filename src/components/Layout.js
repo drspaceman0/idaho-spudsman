@@ -78,7 +78,7 @@ export default function Layout({
     // const url = location.href ? location.href : "";
     // const url = (typeof window !== 'undefined' ? window.location.href : ""; // dev variable
 
-    // let myTabVal = 0; // this determines which tab is selected on navbar
+    let myTabVal = 0; // this determines which tab is selected on navbar
     // switch (window.location.pathname) {
     //     case '/': myTabVal = 0; break;
     //     case '/article': myTabVal = null; break;
