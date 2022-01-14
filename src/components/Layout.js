@@ -68,22 +68,13 @@ const theme = createTheme({
 export default function Layout({
     children,
     // location,
+    tabVal = null,
     title = false,
     description = false,
     image = false,
     path = false,
 }) {
     const myTheme = responsiveFontSizes(theme);
-
-    // const url = location.href ? location.href : "";
-    // const url = (typeof window !== 'undefined' ? window.location.href : ""; // dev variable
-
-    let myTabVal = 0; // this determines which tab is selected on navbar
-    // switch (window.location.pathname) {
-    //     case '/': myTabVal = 0; break;
-    //     case '/article': myTabVal = null; break;
-    //     default: myTabVal = null; break;
-    // }
 
     return (
         <>
@@ -95,7 +86,7 @@ export default function Layout({
           `}</style>
             <ThemeProvider theme={myTheme}>
                 <Container maxWidth="lg">
-                    <Navbar currentTabNum={myTabVal} />
+                    <Navbar currentTabNum={tabVal} />
                     <Container sx={{ px: { xs: 1, md: 6 } }}>
                         <main>{children}</main>
                     </Container>

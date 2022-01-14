@@ -3,9 +3,8 @@ import { useState, useEffect } from "react";
 // import * as contentful from "contentful"; 
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import Navbar from "../components/Navbar.js";
+import Layout from "../components/Layout.js";
 import Sidebar from "../components/Sidebar.js";
-import Footer from "../components/Footer.js";
 import ArticleCard from "../components/ArticleCard.js";
 import FeaturedArticleCard from "../components/FeaturedArticleCard.js";
 
@@ -30,42 +29,23 @@ var Home = () => {
   }
 
   return (
-    <Grid container>
-      <Grid item xs={12} sm={8}>
-        <Container>
-          <Grid container spacing={3} sx={{ mt: 0 }}>
-            <FeaturedArticleCard post={articles[0]} xs={12} sm={12} />
-            {articles.slice(1).map((post, index) => (
-              <ArticleCard key={index} post={post} xs={12} sm={6} />
-            ))}
-          </Grid>
-        </Container>
+    <Layout tabVal={0}>
+      <Grid container>
+        <Grid item xs={12} sm={8}>
+          <Container>
+            <Grid container spacing={3} sx={{ mt: 0 }}>
+              <FeaturedArticleCard post={articles[0]} xs={12} sm={12} />
+              {articles.slice(1).map((post, index) => (
+                <ArticleCard key={index} post={post} xs={12} sm={6} />
+              ))}
+            </Grid>
+          </Container>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Sidebar />
+        </Grid>
       </Grid>
-      <Grid item xs={12} sm={4}>
-        <Sidebar />
-      </Grid>
-    </Grid>
-    // <Container maxWidth="lg">
-    //   <Navbar />
-    //   <Container sx={{ px: { xs: 1, md: 6 } }}>
-    //     <Grid container>
-    //       <Grid item xs={12} sm={8}>
-    //         <Container>
-    //           <Grid container spacing={3} sx={{ mt: 0 }}>
-    //             <FeaturedArticleCard post={articles[0]} xs={12} sm={12} />
-    //             {articles.slice(1).map((post, index) => (
-    //               <ArticleCard key={index} post={post} xs={12} sm={6} />
-    //             ))}
-    //           </Grid>
-    //         </Container>
-    //       </Grid>
-    //       <Grid item xs={12} sm={4}>
-    //         <Sidebar />
-    //       </Grid>
-    //     </Grid>
-    //   </Container>
-    //   <Footer />
-    // </Container >
+    </Layout>
   );
 };
 export default Home;
