@@ -35,7 +35,7 @@ export default function ContentfulArticle({ data }) {
     return (
         <Layout>
             <style>{`
-            .first-paragraph::first-letter{
+            .first-paragraph>p:first-of-type::first-letter{
                 float: left;
                 font-size: 4em;
                 line-height: .9em;
@@ -57,7 +57,7 @@ export default function ContentfulArticle({ data }) {
                 {post.dateCreated} | By Idaho Spudsman Staff
             </Typography>
             <article>
-                <Typography className="first-paragraph" variant="body1" sx={{ pt: 2, }}
+                <Typography className="first-paragraph" component={'span'} variant="body1" sx={{ pt: 2, }}
                 >
                     {renderRichText(post.text, richTextOptions)}
                 </Typography>

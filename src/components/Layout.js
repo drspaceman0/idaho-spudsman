@@ -68,7 +68,7 @@ const theme = createTheme({
 export default function Layout({
     children,
     // location,
-    tabVal = null,
+    tabVal = false,
     title = false,
     description = false,
     image = false,
