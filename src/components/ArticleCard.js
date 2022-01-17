@@ -25,33 +25,33 @@ function ArticleCard(props) {
 
   return (
     <Grid item xs={xs} sm={sm}>
-      <article>
-        <Card square sx={{ boxShadow: 0, border: "none" }}>
-          <CardContent
-            sx={{
-              px: 0,
-              pt: 0,
-              pb: 2,
-              borderBottom: 3,
-              borderColor: "primary.main",
-            }}
-          >
-            <Typography variant="caption">
-              {formatDate(post.dateCreated)}
-            </Typography>
-            <Typography gutterBottom variant="h4" component="div">
-              {post.title}
-            </Typography>
-            <Typography variant="body1">{previewText(post.preview)}</Typography>
-          </CardContent>
-          <CardMedia
-            component="img"
-            height="140"
-            image="https://source.unsplash.com/random"
-            alt=""
-          />
-        </Card>
-      </article>
+      <Card square sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', boxShadow: 0, border: "none" }}>
+        <CardContent
+          sx={{
+            px: 0,
+            pt: 0,
+            pb: 2,
+          }}
+        >
+          <Typography variant="caption">
+            {formatDate(post.dateCreated)}
+          </Typography>
+          <Typography gutterBottom variant="h4" component="div">
+            {post.title}
+          </Typography>
+          <Typography variant="body1">{previewText(post.preview)}</Typography>
+        </CardContent>
+        <CardMedia
+          component="img"
+          height="140"
+          image="https://source.unsplash.com/random"
+          alt=""
+          sx={{
+            borderTop: 3,
+            borderColor: "primary.main",
+          }}
+        />
+      </Card>
     </Grid>
   );
 }

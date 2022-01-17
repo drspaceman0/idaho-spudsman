@@ -2,13 +2,13 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Typography from "@mui/material/Typography";
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 import { Container } from "@mui/material";
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 
 export const query = graphql`
-query ContentfulArticle($id: String!) {
+query($id: String!) {
     contentfulArticle(id: { eq: $id }) {
     title
     text {
@@ -27,7 +27,6 @@ query ContentfulArticle($id: String!) {
 
 export default function ContentfulArticle({ data }) {
     const post = data.contentfulArticle;
-    const richTextOptions = {};
 
     if (!post) {
         return null;
@@ -57,9 +56,8 @@ export default function ContentfulArticle({ data }) {
                 {post.dateCreated} | By Idaho Spudsman Staff
             </Typography>
             <article>
-                <Typography className="first-paragraph" component={'span'} variant="body1" sx={{ pt: 2, }}
-                >
-                    {renderRichText(post.text, richTextOptions)}
+                <Typography className="first-paragraph" component={'span'} variant="body1" sx={{ pt: 2, }}>
+                    {renderRichText(post.text, {})}
                 </Typography>
             </article>
         </Layout >
