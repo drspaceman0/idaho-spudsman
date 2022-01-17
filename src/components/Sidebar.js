@@ -47,18 +47,14 @@ function Sidebar(props) {
   return (
     <aside id="sidebar">
       <Container disableGutters sx={{ pt: 2, pl: 2 }}>
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={2} sx={{ pt: 0.5 }}>
 
           {/* social media links  */}
           {
             socialMedias.map((item, index) => (
-              <Link
-                key={index}
-                to={item.href}
-                sx={{ mb: 0.5 }}
-              >
+              <a key={index} href={item.href}  >
                 {item.icon}
-              </Link>
+              </a>
             ))
           }
         </Stack >

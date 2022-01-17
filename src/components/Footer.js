@@ -31,7 +31,7 @@ const socialMedias = [
 function Footer() {
     return (
         <footer>
-            <Container sx={{ mt: 2, pt: 2, alignItems: "center", borderTop: '1px solid #dcdcdc' }}>
+            <Container sx={{ mt: 2, pt: 2, pb: 2, alignItems: "center", borderTop: '1px solid #dcdcdc' }}>
                 <Stack direction="column" spacing="{2}" justifyContent="center" alignItems="center">
 
                     <Link to="/">
@@ -52,14 +52,9 @@ function Footer() {
                         {/* social media links  */}
                         {
                             socialMedias.map((item, index) => (
-                                <Link
-                                    key={index}
-                                    display="block"
-                                    to={item.href}
-                                    sx={{ mb: 0.5 }}
-                                >
+                                <a key={index} href={item.href}  >
                                     {item.icon}
-                                </Link>
+                                </a>
                             ))
                         }
                     </Stack >
