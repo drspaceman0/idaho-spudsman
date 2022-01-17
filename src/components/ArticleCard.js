@@ -44,7 +44,7 @@ function ArticleCard(props) {
         <CardMedia
           component="img"
           height="140"
-          image="https://source.unsplash.com/random"
+          image={post.image}
           alt=""
           sx={{
             borderTop: 3,

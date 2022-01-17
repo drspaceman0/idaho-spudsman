@@ -35,7 +35,7 @@ function TagIndex({ data }) {
             title: d.node.title,
             preview: "",
             dateCreated: d.node.dateCreated,
-            image: d.node.image.gatsbyImageData,
+            image: d.node.image.gatsbyImageData.images.fallback.src,
             imageText: d.node.title,
         }
     });
