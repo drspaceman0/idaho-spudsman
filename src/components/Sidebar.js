@@ -1,13 +1,9 @@
 import * as React from "react";
 import { useState } from "react";
 import Container from "@mui/material/Container";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { Link } from "gatsby";
 import ArticleLinkCard from "../components/ArticleLinkCard.js";
-import TwitterIcon from '@mui/icons-material/Twitter';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
+
 
 
 
@@ -20,45 +16,13 @@ const myArticle = {
   imageText: "main image description",
 };
 
-
-
-
-const socialMedias = [
-  {
-    href: "https://twitter.com/ISpudsman",
-    icon: <TwitterIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
-  },
-  {
-    href: "#",
-    icon: <FacebookIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
-  },
-  {
-    href: "https://github.com/drspaceman0",
-    icon: <GitHubIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
-  },
-];
-
 const tempArticles = Array(8).fill(myArticle);
-
-
 
 function Sidebar(props) {
   const [popularArticles, setPopularArticles] = useState(tempArticles);
   return (
     <aside id="sidebar">
       <Container disableGutters sx={{ pt: 2, pl: 2 }}>
-        <Stack direction="row" spacing={2} sx={{ pt: 0.5 }}>
-
-          {/* social media links  */}
-          {
-            socialMedias.map((item, index) => (
-              <a key={index} href={item.href}  >
-                {item.icon}
-              </a>
-            ))
-          }
-        </Stack >
-
         {/* popular posts  */}
         <Typography gutterBottom variant="h6" sx={{
           px: 0,
