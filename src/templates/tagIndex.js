@@ -37,6 +37,7 @@ function TagIndex({ data }) {
             dateCreated: d.node.dateCreated,
             image: d.node.image.gatsbyImageData.images.fallback.src,
             imageText: d.node.title,
+            slug: `/post/${d.node.slug}`,
         }
     });
     return (
