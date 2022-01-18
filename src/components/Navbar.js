@@ -22,9 +22,9 @@ import Logo from "../images//idaho_spudsman_logo.svg";
 
 const pages = [
   { title: "Home", url: "/" },
-  { title: "Local", url: "/local" },
-  { title: "National", url: "/national" },
-  { title: "Sports", url: "/sports" },
+  { title: "Local", url: "/tag/local" },
+  { title: "National", url: "/tag/national" },
+  { title: "Sports", url: "/tag/sports" },
 ];
 
 const socialMedias = [
