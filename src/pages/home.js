@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-// import * as contentful from "contentful"; 
+import { graphql } from "gatsby";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Layout from "../components/Layout.js";
@@ -8,24 +8,11 @@ import Sidebar from "../components/Sidebar.js";
 import ArticleCard from "../components/ArticleCard.js";
 import FeaturedArticleCard from "../components/FeaturedArticleCard.js";
 
+var Home = ({ articles }) => {
 
-const myArticle = {
-  title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-  preview:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  dateCreated: "10/03/2017 07:29:46 -0700",
-  image: "https://source.unsplash.com/random",
-  imageText: "main image description",
-};
-
-const tempArticles = Array(7).fill(myArticle);
-
-var Home = () => {
-  //   const [articles, setArticles] = useState(null);
-  const [articles, setArticles] = useState(tempArticles);
-
-  if (!articles) {
-    return <h2>Loading website</h2>;
+  if (!articles || !articles.length) {
+    console.error("Error loading articles")
+    return null;
   }
 
   return (
@@ -48,4 +35,4 @@ var Home = () => {
     </Layout>
   );
 };
-export default Home;
+export default Home; 
