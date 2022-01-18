@@ -14,11 +14,6 @@ function FeaturedArticleCard(props) {
     return s.split(" ").slice(0, previewWordAmount).join(" ") + "...";
   }
 
-  function formatDate(timestamp) {
-    var d = new Date(timestamp);
-    return d.toLocaleDateString("en-US");
-  }
-
   if (!post) {
     return null;
   }
@@ -37,7 +32,7 @@ function FeaturedArticleCard(props) {
             }}
           >
             <Typography variant="caption">
-              {formatDate(post.dateCreated)}
+              {post.dateCreated}
             </Typography>
             <Typography gutterBottom variant="h2" component="div">
               {post.title}

@@ -33,7 +33,7 @@ export const query = graphql`
         node {
           title
           slug
-          dateCreated
+          dateCreated(formatString: "DD MMMM, YYYY")
           image {
             gatsbyImageData
           }

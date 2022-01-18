@@ -16,10 +16,7 @@ function ArticleCard(props) {
     return s.split(" ").slice(0, previewWordAmount).join(" ") + "...";
   }
 
-  function formatDate(timestamp) {
-    var d = new Date(timestamp);
-    return d.toLocaleDateString("en-US");
-  }
+
 
   if (!post) {
     return null;
@@ -47,7 +44,7 @@ function ArticleCard(props) {
             }}
           >
             <Typography variant="caption">
-              {formatDate(post.dateCreated)}
+              {post.dateCreated}
             </Typography>
             <Typography gutterBottom variant="h4" component="div">
               {post.title}
