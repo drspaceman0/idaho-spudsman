@@ -41,7 +41,7 @@ function FeaturedArticleCard(props) {
           <CardMedia
             component="img"
             height="415"
-            image="https://source.unsplash.com/random"
+            image={post.image}
             alt=""
           />
           <Typography variant="body2" sx={{ pt: 2 }}>
