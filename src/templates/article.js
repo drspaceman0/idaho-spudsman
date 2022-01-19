@@ -45,13 +45,12 @@ export default function ContentfulArticle({ data, location: { pathname }, }) {
             `}</style>
             <Typography variant="h2" sx={{
                 py: 2,
-                borderBottom: 3,
-                borderColor: "primary.main",
+
             }}>
                 {post.title}
             </Typography>
-            <Container disableGutters sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }}>
-                <GatsbyImage image={post.image.gatsbyImageData} alt={post.title} />
+            <Container disableGutters sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f17720' }}>
+                <GatsbyImage image={post.image.gatsbyImageData} alt={post.title} style={{ borderTop: '3px solid #f17720' }} />
             </Container>
             <Typography variant="caption" >
                 {post.dateCreated} | By Idaho Spudsman Staff
