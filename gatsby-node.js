@@ -16,8 +16,7 @@ exports.createPages = async ({ actions, graphql }) => {
         {
         allContentfulArticle(filter: {tags: {eq: "local"}}) {
           edges {
-            node {
-              title
+            node { 
               tags
               slug
               id
@@ -28,8 +27,6 @@ exports.createPages = async ({ actions, graphql }) => {
     `).then(result => {
 
         const articles = result.data.allContentfulArticle.edges;
-        console.log(articles);
-        console.log(articles[0]);
         articles.forEach((article, index) => {
 
             // create page for post 
@@ -38,6 +35,7 @@ exports.createPages = async ({ actions, graphql }) => {
                 component: require.resolve("./src/templates/article.js"),
                 context: {
                     id: article.node.id,
+                    slug: article.node.slug,
                 },
             });
 

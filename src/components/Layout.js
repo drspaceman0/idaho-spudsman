@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 import { Container, Grid } from "@mui/material";
-
+import { Seo } from '../components/seo.js';
 
 import {
     ThemeProvider,
@@ -65,12 +65,10 @@ const theme = createTheme({
 
 export default function Layout({
     children,
-    // location,
-    tabVal = false,
-    title = false,
-    description = false,
-    image = false,
-    path = false,
+    title = "",
+    description = "",
+    image = "",
+    path = "",
 }) {
     const myTheme = responsiveFontSizes(theme);
 
@@ -82,9 +80,10 @@ export default function Layout({
            padding: 0px;
           }
           `}</style>
+            <Seo title={title} description={description} image={image} path={path} />
             <ThemeProvider theme={myTheme}>
                 <Container maxWidth="lg">
-                    <Navbar currentTabNum={tabVal} />
+                    <Navbar path={path} />
                     <Container sx={{ px: { xs: 1, md: 6 } }}>
                         <main>{children}</main>
                     </Container>

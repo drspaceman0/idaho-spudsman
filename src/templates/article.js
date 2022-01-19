@@ -11,6 +11,7 @@ export const query = graphql`
 query($id: String!) {
     contentfulArticle(id: { eq: $id }) {
     title
+    description
     text {
         raw
     }
@@ -25,14 +26,14 @@ query($id: String!) {
   }
   `;
 
-export default function ContentfulArticle({ data }) {
+export default function ContentfulArticle({ data, location: { pathname }, }) {
     const post = data.contentfulArticle;
 
     if (!post) {
         return null;
     }
     return (
-        <Layout>
+        <Layout title={post.title} description={post.description} path={pathname}>
             <style>{`
             .first-paragraph>p:first-of-type::first-letter{
                 float: left;

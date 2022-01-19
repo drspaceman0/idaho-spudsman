@@ -29,7 +29,7 @@ export const query = graphql`
 `;
 
 
-function TagIndex({ data }) {
+function TagIndex({ data, path, pageContext: { tag, pages, }, }) {
     const articles = (data.allContentfulArticle.edges).map((d) => {
         return {
             title: d.node.title,
@@ -41,7 +41,7 @@ function TagIndex({ data }) {
         }
     });
     return (
-        <Layout>
+        <Layout title={`Articles Tagged With ${tag}`} description={`Articles Tagged With ${tag}`} path={path}>
             <Container>
                 <Grid container spacing={3} sx={{ mt: 0 }}>
                     {articles.map((post, index) => (
@@ -49,7 +49,6 @@ function TagIndex({ data }) {
                     ))}
                 </Grid>
             </Container>
-
         </Layout >
 
     );

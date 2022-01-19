@@ -7,7 +7,7 @@ import Layout from "../components/Layout.js";
 import Sidebar from "../components/Sidebar.js";
 import ArticleCard from "../components/ArticleCard.js";
 
-var Home = ({ articles }) => {
+var Home = ({ articles, path, }) => {
 
   if (!articles || !articles.length) {
     console.error("Error loading articles")
@@ -15,7 +15,8 @@ var Home = ({ articles }) => {
   }
 
   return (
-    <Layout tabVal={0}>
+
+    <Layout title={"Idaho Spudsman"} description={"Real Fake News For The Fake Real Idahoan"} path={path} >
       <Grid container>
         <Grid item xs={12} sm={8}>
           <Container>

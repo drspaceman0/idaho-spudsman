@@ -42,9 +42,28 @@ const socialMedias = [
   },
 ];
 
+function getTabVal(path) {
+  switch (path) {
+    case "/":
+      return 0;
+      break;
+    case "/tag/local":
+      return 1;
+      break;
+    case "/tag/national":
+      return 2;
+      break;
+    case "/tag/sports":
+      return 3;
+      break;
+    default:
+      return false;
+      break;
+  }
+}
+
 const Navbar = (props) => {
-  let { currentTabNum } = props;
-  const [tabVal, setTabVal] = useState(currentTabNum);
+  const [tabVal, setTabVal] = useState(getTabVal(props.path));
   const handleChange = (event, newValue) => {
     setTabVal(newValue);
   };
