@@ -1,7 +1,8 @@
 import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-
+import Link from "@mui/material/Link";
+import { Link as GatsbyLink } from "gatsby";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -14,7 +15,7 @@ function FeaturedArticleCard(props) {
 
   return (
     <Grid item xs={xs} sm={sm}>
-      <article>
+      <Link to={post.slug} component={GatsbyLink} underline="none">
         <Card square sx={{ boxShadow: 0, border: "none" }}>
           <CardContent
             sx={{
@@ -42,7 +43,7 @@ function FeaturedArticleCard(props) {
             {post.textPreview}
           </Typography>
         </Card>
-      </article>
+      </Link>
     </Grid>
   );
 }

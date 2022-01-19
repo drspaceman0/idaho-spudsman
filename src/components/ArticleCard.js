@@ -16,9 +16,7 @@ function ArticleCard(props) {
 
   return (
     <Grid item xs={xs} sm={sm}>
-      <Link to={post.slug} component={GatsbyLink} underline="none"
-
-      >
+      <Link to={post.slug} component={GatsbyLink} underline="none">
 
         <Card square sx={{
           display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', boxShadow: 0, border: "none",
