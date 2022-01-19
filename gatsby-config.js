@@ -4,8 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://idaho-spudsman.netlify.app/",
     title: "Idaho Spudsman",
+    description: "Real Fake News For The Fake Real Idahoan",
+    image: "https://images.ctfassets.net/y5a0adklapc1/5EvHT2CIKaMCn7MgGLuLXu/520b2fe70c570c6d6f07fb4a4b9d1a97/idaho-spudsman.jpg",
   },
 
   plugins: [
