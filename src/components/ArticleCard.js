@@ -24,12 +24,7 @@ function ArticleCard(props) {
           },
         }}>
           <CardContent
-            sx={{
-              px: 0,
-              pt: 0,
-              pb: 2,
-            }}
-          >
+            sx={{ px: 0, pt: 0, pb: 2, }}>
             <Typography variant="caption">
               {post.dateCreated}
             </Typography>
@@ -38,14 +33,9 @@ function ArticleCard(props) {
             </Typography>
             <CardMedia
               component="img"
-              height="140"
               image={post.image}
               alt=""
-              sx={{
-                borderTop: 3,
-                borderColor: "primary.main",
-              }}
-            />
+              sx={{ borderTop: 3, borderColor: "primary.main", }} />
             <Typography variant="body1">{post.textPreview}</Typography>
           </CardContent>
         </Card>

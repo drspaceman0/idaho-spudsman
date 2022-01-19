@@ -55,12 +55,10 @@ const theme = createTheme({
             fontWeight: 500,
             fontSize: "18px",
             lineHeight: 2,
-            fontFamily: "Noto Serif",
         },
         body2: {
             fontWeight: 500,
             fontSize: "15px",
-            fontFamily: "Noto Serif",
         },
     },
 });

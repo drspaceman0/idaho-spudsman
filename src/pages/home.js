@@ -6,7 +6,6 @@ import Container from "@mui/material/Container";
 import Layout from "../components/Layout.js";
 import Sidebar from "../components/Sidebar.js";
 import ArticleCard from "../components/ArticleCard.js";
-import FeaturedArticleCard from "../components/FeaturedArticleCard.js";
 
 var Home = ({ articles }) => {
 
@@ -21,7 +20,7 @@ var Home = ({ articles }) => {
         <Grid item xs={12} sm={8}>
           <Container>
             <Grid container spacing={3} sx={{ mt: 0 }}>
-              <FeaturedArticleCard post={articles[0]} xs={12} sm={12} />
+              <ArticleCard post={articles[0]} xs={12} sm={12} />
               {articles.slice(1).map((post, index) => (
                 <ArticleCard key={index} post={post} xs={12} sm={6} />
               ))}
