@@ -17,13 +17,10 @@ function ArticleCard(props) {
   return (
     <Grid item xs={xs} sm={sm}>
       <Link to={post.slug} component={GatsbyLink} underline="none">
-
-        <Card square sx={{
+        <Card className="articleCard" square sx={{
           display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', boxShadow: 0, border: "none",
-          transition: 'opacity 0.2s',
-          opacity: '1',
-          '&:hover': {
-            opacity: '0.7'
+          '&:hover div .title': {
+            color: "primary.main"
           },
         }}>
           <CardContent
@@ -36,7 +33,7 @@ function ArticleCard(props) {
             <Typography variant="caption">
               {post.dateCreated}
             </Typography>
-            <Typography gutterBottom variant="h4" component="div">
+            <Typography className="title" gutterBottom variant="h4" component="div">
               {post.title}
             </Typography>
             <CardMedia
