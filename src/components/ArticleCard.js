@@ -9,14 +9,6 @@ import CardMedia from "@mui/material/CardMedia";
 
 function ArticleCard(props) {
   const { post, xs, sm } = props;
-  const previewWordAmount = 25;
-
-  function previewText(s) {
-    if (!s) return "";
-    return s.split(" ").slice(0, previewWordAmount).join(" ") + "...";
-  }
-
-
 
   if (!post) {
     return null;
@@ -49,18 +41,18 @@ function ArticleCard(props) {
             <Typography gutterBottom variant="h4" component="div">
               {post.title}
             </Typography>
-            <Typography variant="body1">{previewText(post.preview)}</Typography>
+            <CardMedia
+              component="img"
+              height="140"
+              image={post.image}
+              alt=""
+              sx={{
+                borderTop: 3,
+                borderColor: "primary.main",
+              }}
+            />
+            <Typography variant="body1">{post.textPreview}</Typography>
           </CardContent>
-          <CardMedia
-            component="img"
-            height="140"
-            image={post.image}
-            alt=""
-            sx={{
-              borderTop: 3,
-              borderColor: "primary.main",
-            }}
-          />
         </Card>
       </Link>
     </Grid>

@@ -8,12 +8,6 @@ import CardMedia from "@mui/material/CardMedia";
 
 function FeaturedArticleCard(props) {
   const { post, xs, sm } = props;
-  const previewWordAmount = 25;
-
-  function getPreview(s) {
-    return s.split(" ").slice(0, previewWordAmount).join(" ") + "...";
-  }
-
   if (!post) {
     return null;
   }
@@ -45,7 +39,7 @@ function FeaturedArticleCard(props) {
             alt=""
           />
           <Typography variant="body2" sx={{ pt: 2 }}>
-            {getPreview(post.preview)}
+            {post.textPreview}
           </Typography>
         </Card>
       </article>

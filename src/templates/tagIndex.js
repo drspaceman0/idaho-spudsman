@@ -33,7 +33,7 @@ function TagIndex({ data }) {
     const articles = (data.allContentfulArticle.edges).map((d) => {
         return {
             title: d.node.title,
-            preview: "",
+            textPreview: "",
             dateCreated: d.node.dateCreated,
             image: d.node.image.gatsbyImageData.images.fallback.src,
             imageText: d.node.title,
