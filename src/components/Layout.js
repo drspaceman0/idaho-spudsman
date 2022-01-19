@@ -84,7 +84,8 @@ export default function Layout({
             <ThemeProvider theme={myTheme}>
                 <Container maxWidth="lg">
                     <Navbar path={path} />
-                    <Container sx={{ px: { xs: 1, md: 6 } }}>
+                    {/* <Container sx={{ px: { xs: 1, md: 6 } }}> */}
+                    <Container disableGutters>
                         <main>{children}</main>
                     </Container>
                     <Footer />

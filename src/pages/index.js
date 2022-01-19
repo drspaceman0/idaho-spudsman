@@ -6,6 +6,7 @@ import Home from "./home";
 
 const previewWordAmount = 25;
 function getPreviewOfRichText(rt) {
+  if (!rt) return ""
   const renderedText = renderRichText(rt, {});
   const firstParagraph = renderedText[0].props.children[0];
   const previewText = firstParagraph.split(" ").slice(0, previewWordAmount).join(" ").slice(0, -1) + "...";
@@ -36,7 +37,7 @@ export default function IndexPage({ data, location: { pathname } }) {
 
 export const query = graphql`
 {
-  allContentfulArticle(limit: 20, sort: {fields: dateCreated, order: DESC}) {
+  allContentfulArticle(limit: 5, sort: {fields: dateCreated, order: DESC}) {
       edges {
         node {
           title

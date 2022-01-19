@@ -19,11 +19,10 @@ var Home = ({ articles, path, }) => {
     <Layout title={"Idaho Spudsman"} description={"Real Fake News For The Fake Real Idahoan"} path={path} >
       <Grid container>
         <Grid item xs={12} sm={8}>
-          <Container>
+          <Container disableGutters sx={{ pr: { xs: 0, sm: 2, md: 4 } }}>
             <Grid container spacing={3} sx={{ mt: 0 }}>
-              <ArticleCard post={articles[0]} xs={12} sm={12} />
-              {articles.slice(1).map((post, index) => (
-                <ArticleCard key={index} post={post} xs={12} sm={6} />
+              {articles.map((post, index) => (
+                <ArticleCard key={index} post={post} xs={12} sm={(index == 0 ? 12 : 6)} />
               ))}
             </Grid>
           </Container>
