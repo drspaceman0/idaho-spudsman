@@ -124,7 +124,17 @@ const Navbar = (props) => {
           indicatorColor="primary"
         >
           {pages.map((page, index) => (
-            <Tab key={index} label={page.title} href={page.url} color="#707070" />
+            <Tab key={index} label={page.title} href={page.url} color="#707070"
+              sx={{
+                '&:hover': {
+                  color: "primary.main",
+                  opacity: 0.7,
+                },
+                '&:active': {
+                  color: "primary.main",
+                  opacity: 1,
+                }
+              }} />
           ))}
         </Tabs>
       </Toolbar >
