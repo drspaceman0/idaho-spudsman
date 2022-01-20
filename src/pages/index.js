@@ -3,22 +3,11 @@ import { graphql } from "gatsby";
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import Home from "./home";
 
-
-const previewWordAmount = 25;
-function getPreviewOfRichText(rt) {
-  if (!rt) return ""
-  const renderedText = renderRichText(rt, {});
-  const firstParagraph = renderedText[0].props.children[0];
-  const previewText = firstParagraph.split(" ").slice(0, previewWordAmount).join(" ").slice(0, -1) + "...";
-  return previewText;
-}
-
-
 export default function IndexPage({ data, location: { pathname } }) {
   const articles = (data.allContentfulArticle.edges).map((d) => {
     return {
       title: d.node.title,
-      textPreview: getPreviewOfRichText(d.node.text),
+      textPreview: d.node.description,
       dateCreated: d.node.dateCreated,
       image: d.node.image.gatsbyImageData.images.fallback.src,
       imageText: d.node.title,
@@ -46,9 +35,7 @@ export const query = graphql`
           image {
             gatsbyImageData
           }
-          text {
-            raw
-          }
+          description
         }
       }
     }
