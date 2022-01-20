@@ -35,7 +35,7 @@ function ArticleCard(props) {
               component="img"
               image={post.image}
               alt=""
-              sx={{ borderTop: 3, borderColor: "primary.main", }} />
+              sx={{ borderTop: 3, borderColor: "primary.main", backgroundColor: "primary.main" }} />
             <Typography variant="body1">{post.textPreview}</Typography>
           </CardContent>
         </Card>
