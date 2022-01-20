@@ -82,7 +82,6 @@ const Navbar = (props) => {
         }}
       >
         <Grid container>
-
           <Grid item xs>
             <IconButton color="primary">
               {/* <MenuIcon /> */}
@@ -103,17 +102,20 @@ const Navbar = (props) => {
             </Link>
           </Grid>
           <Grid item xs>
-            <Container disableGutters sx={{ justifyContent: "center", alignItems: "center", textAlign: "center" }}>
-              <Stack direction="row" spacing={2}   >
+            <Container disableGutters sx={{ display: { xs: 'none', sm: 'block' } }} >
+              <Grid container>
                 {/* social media links  */}
                 {
                   socialMedias.map((item, index) => (
-                    <a key={index} href={item.href}  >
-                      {item.icon}
-                    </a>
+                    <Grid item xs={4} style={{ textAlign: 'right' }}>
+                      <a key={index} href={item.href}  >
+                        {item.icon}
+                      </a>
+                    </Grid>
                   ))
                 }
-              </Stack >
+                <Grid item xs></Grid>
+              </Grid>
             </Container>
           </Grid>
         </Grid>
