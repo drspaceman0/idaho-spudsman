@@ -14,7 +14,12 @@ function PrintCards(props) {
         return null;
     }
     return (
-        <Box sx={{ py: 1 }}>
+        <Box sx={{
+            py: 1,
+            '&:hover .title': {
+                textDecoration: 'underline'
+            },
+        }}>
             <Link to={post.slug} component={GatsbyLink} underline="none" >
                 <Card square >
                     <Box sx={{ position: 'relative' }}>
@@ -34,7 +39,7 @@ function PrintCards(props) {
                                 padding: '10px',
                             }}
                         >
-                            <Typography variant="subtitle2" color="white">{post.title}</Typography>
+                            <Typography className="title" variant="subtitle2" color="white">{post.title}</Typography>
                         </Box>
                     </Box>
                 </Card>
