@@ -49,9 +49,8 @@ export default function ContentfulArticle({ data, location: { pathname }, }) {
             }}>
                 {post.title}
             </Typography>
-            <Container disableGutters sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f17720' }}>
-                <GatsbyImage image={post.image.gatsbyImageData} alt={post.title} style={{ borderTop: '3px solid #f17720' }} />
-            </Container>
+            <GatsbyImage image={post.image.gatsbyImageData} alt={post.title} style={{ borderTop: '3px solid #f17720' }} />
+            <br />
             <Typography variant="caption" >
                 {post.dateCreated} | By Idaho Spudsman Staff
             </Typography>

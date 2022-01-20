@@ -97,7 +97,7 @@ export default function Layout({
           `}</style>
             <Seo title={title} description={description} image={image} path={path} />
             <ThemeProvider theme={myTheme}>
-                <Container maxWidth="lg">
+                <Container maxWidth="md">
                     <Navbar path={path} />
                     {/* <Container sx={{ px: { xs: 1, md: 6 } }}> */}
                     <Container disableGutters>
