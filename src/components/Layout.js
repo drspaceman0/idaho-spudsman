@@ -22,6 +22,7 @@ const theme = createTheme({
         },
     },
     typography: {
+        color: "#000",
         fontFamily: "Noto Sans",
         fontWeightLight: 400,
         fontWeightRegular: 500,
@@ -30,40 +31,49 @@ const theme = createTheme({
         h2: {
             fontWeight: 700,
             fontSize: "44px",
+            color: "#000",
         },
         h4: {
             fontWeight: 700,
             fontSize: "26px",
+            color: "#000",
         },
         h5: {
             fontWeight: 600,
             fontSize: "17px",
-
+            color: "#000",
         },
         h6: {
             fontWeight: 600,
             fontSize: "19px",
-
+            color: "#000",
         },
         subtitle1: {
             fontWeight: 500,
             fontSize: "15px",
+            color: "#000",
         },
         subtitle2: {
             fontWeight: 500,
             fontSize: "14px",
+            color: "#000",
             p: 0,
             b: 0
         },
-
+        caption: {
+            fontSize: "12px",
+            color: "#000",
+        },
         body1: {
             fontWeight: 500,
             fontSize: "18px",
             lineHeight: 2,
+            color: "#000",
         },
         body2: {
             fontWeight: 500,
             fontSize: "15px",
+            color: "#000",
         },
     },
 });

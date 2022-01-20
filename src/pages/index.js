@@ -9,7 +9,7 @@ export default function IndexPage({ data, location: { pathname } }) {
       title: d.node.title,
       textPreview: d.node.description,
       dateCreated: d.node.dateCreated,
-      image: d.node.image.gatsbyImageData.images.fallback.src,
+      image: d.node.image,
       imageText: d.node.title,
       slug: `/post/${d.node.slug}`,
     };
@@ -33,8 +33,8 @@ export const query = graphql`
           slug
           dateCreated(formatString: "DD MMMM, YYYY")
           image {
-            gatsbyImageData
-          }
+            gatsbyImageData(placeholder: DOMINANT_COLOR)
+        }
           description
         }
       }
