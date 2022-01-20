@@ -102,7 +102,7 @@ const Navbar = (props) => {
             </Link>
           </Grid>
           <Grid item xs>
-            <Container disableGutters sx={{ display: { xs: 'none', sm: 'block' } }} >
+            <Container disableGutters sx={{ width: 104, display: { xs: 'none', sm: 'block' } }} >
               <Grid container>
                 {/* social media links  */}
                 {
