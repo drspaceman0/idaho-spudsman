@@ -15,7 +15,7 @@ function ArticleCard(props) {
   }
 
   return (
-    <Grid item xs={xs} sm={sm}>
+    <Grid item xs={xs} sm={sm} sx={{ display: 'flex', alignItems: 'flex-start' }}>
       <Link to={post.slug} component={GatsbyLink} underline="none">
         <Box sx={{
           display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', boxShadow: 0, border: "none",
