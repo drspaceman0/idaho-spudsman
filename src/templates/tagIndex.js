@@ -35,7 +35,7 @@ function TagIndex({ data, path, pageContext: { tag, pages, }, }) {
             title: d.node.title,
             textPreview: "",
             dateCreated: d.node.dateCreated,
-            image: d.node.image.gatsbyImageData.images.fallback.src,
+            image: d.node.image,
             imageText: d.node.title,
             slug: `/post/${d.node.slug}`,
         }
