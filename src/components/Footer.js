@@ -30,7 +30,7 @@ const socialMedias = [
 function Footer() {
     return (
         <footer>
-            <Container sx={{ mt: 2, pt: 2, pb: 2, alignItems: "center", borderTop: '1px solid #dcdcdc' }}>
+            <Container sx={{ mt: 2, pt: 2, pb: 2, alignItems: "center" }}>
                 <Stack direction="column" spacing="{2}" justifyContent="center" alignItems="center">
 
                     <Link to="/">

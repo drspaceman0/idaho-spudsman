@@ -33,6 +33,11 @@ const theme = createTheme({
             fontSize: "44px",
             color: "#000",
         },
+        h3: {
+            fontWeight: 700,
+            fontSize: "30px",
+            color: "#000",
+        },
         h4: {
             fontWeight: 700,
             fontSize: "26px",
@@ -79,6 +84,12 @@ const theme = createTheme({
     },
 });
 
+const childrenContainerStyles = {
+    borderTop: '1px solid #dcdcdc',
+    borderBottom: '1px solid #dcdcdc',
+    paddingBottom: '12px',
+};
+
 export default function Layout({
     children,
     title = "",
@@ -101,7 +112,7 @@ export default function Layout({
                 <Container maxWidth="md">
                     <Navbar path={path} />
                     {/* <Container sx={{ px: { xs: 1, md: 6 } }}> */}
-                    <Container disableGutters>
+                    <Container disableGutters sx={childrenContainerStyles}>
                         <main>{children}</main>
                     </Container>
                     <Footer />

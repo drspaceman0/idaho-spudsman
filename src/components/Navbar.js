@@ -77,8 +77,6 @@ const Navbar = (props) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          boxShadow: "0 0 3 0",
-          borderBottom: '1px solid #dcdcdc'
         }}
       >
         <Grid container>
