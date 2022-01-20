@@ -22,7 +22,7 @@ var Home = ({ articles, path, }) => {
           <Container disableGutters sx={{ pr: { xs: 0, sm: 2, md: 4 } }}>
             <Grid container spacing={3} sx={{ mt: 0 }}>
               {articles.map((post, index) => (
-                <ArticleCard key={index} post={post} xs={12} sm={(index == 0 ? 12 : 6)} />
+                <ArticleCard key={index} index={index} post={post} xs={12} sm={(index == 0 ? 12 : 6)} />
               ))}
             </Grid>
           </Container>
