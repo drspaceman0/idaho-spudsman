@@ -28,12 +28,12 @@ function Sidebar({ prints }) {
         }
 
         {/* twitter widget lmao */}
-        <a className="twitter-timeline"
+        {/* <a className="twitter-timeline"
           href="https://twitter.com/ISpudsman"
           data-chrome="nofooter noborders noheader"
           data-height="300">
           Tweets by @TwitterDev
-        </a>
+        </a> */}
       </Container>
     </aside>
   );
