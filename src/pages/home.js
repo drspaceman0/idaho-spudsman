@@ -7,7 +7,7 @@ import Layout from "../components/Layout.js";
 import Sidebar from "../components/Sidebar.js";
 import ArticleCard from "../components/ArticleCard.js";
 
-var Home = ({ articles, path, }) => {
+var Home = ({ articles, prints, path, }) => {
 
   if (!articles || !articles.length) {
     console.error("Error loading articles")
@@ -28,7 +28,7 @@ var Home = ({ articles, path, }) => {
           </Container>
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Sidebar />
+          <Sidebar prints={prints} />
         </Grid>
       </Grid>
     </Layout>
