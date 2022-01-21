@@ -3,10 +3,14 @@ import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import PrintCard from "./PrintCard.js";
-import Link from "@mui/material/Link";
-import { Link as GatsbyLink } from "gatsby";
 import Divider from '@mui/material/Divider';
 
+const linkStyles = {
+  color: '#000',
+  fontWeight: '700',
+  textDecoration: 'none',
+
+}
 
 function Sidebar({ prints }) {
 
@@ -45,13 +49,12 @@ function Sidebar({ prints }) {
           </Typography>
           <Typography sx={{ textAlign: 'left', lineHeight: '1.65' }} variant="subtitle1">
             Idaho Spudsman is non-affiliated newsletter made by a group of talented satire writers and Eric.
-            Have a headline for us? <Link to="/about" component={GatsbyLink} underline="hover" color="inherit" sx={{ fontWeight: 700 }}>Submit here</Link>
+            Have a headline for us? <a href="idahospudsman@gmail.com" style={linkStyles} >Submit here</a>
           </Typography>
         </Paper>
       </Container>
     </aside>
   );
 }
-
 
 export default Sidebar;
