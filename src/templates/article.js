@@ -56,7 +56,6 @@ export default function ContentfulArticle({ data, location: { pathname }, }) {
                         {post.title}
                     </Typography>
                     <GatsbyImage image={post.image.gatsbyImageData} aspectRatio={1200 / 640} alt={post.title} layout="fullWidth" style={{ borderTop: '6px solid #f17720' }} />
-                    <br />
                     <Typography variant="caption" >
                         {post.dateCreated} | By Idaho Spudsman Staff
                     </Typography>
@@ -90,7 +89,9 @@ const headlineOnlyMessageStyle = {
 function headlineOnlyMessage() {
     return (
         <Container disableGutters sx={headlineOnlyMessageStyle}>
-            <Typography className="first-paragraph" variant="h3" color="#fff">
+            <Typography className="first-paragraph" variant="h3" color="#fff" sx={{
+                textShadow: '-1px 0 #c15f1a, 0 1px #c15f1a, 1px 0 #c15f1a, 0 -1px #c15f1a'
+            }}>
                 Welcome to the Idaho Spudsman Print Edition! The headline is the whole joke.
             </Typography>
         </Container>
