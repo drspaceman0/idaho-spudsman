@@ -3,13 +3,12 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import { Link as GatsbyLink } from "gatsby";
 
 
 function PrintCards(props) {
-    const { post, xs, sm } = props;
+    const { post } = props;
     if (!post) {
         return null;
     }
@@ -37,8 +36,7 @@ function PrintCards(props) {
                                 bgcolor: 'rgba(0, 0, 0, 0.54)',
                                 color: 'white',
 
-                            }}
-                        >
+                            }}>
                             <Typography className="title" variant="subtitle2" color="white" sx={{ padding: '10px', }}>{post.title}</Typography>
                         </Box>
                     </Box>

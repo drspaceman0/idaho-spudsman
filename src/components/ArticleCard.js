@@ -8,7 +8,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 function ArticleCard(props) {
   const { post, xs, sm, index } = props;
-  const featuredPost = index == 0;
+  const featuredPost = index === 0;
 
   if (!post) {
     return null;

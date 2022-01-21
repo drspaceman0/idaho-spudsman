@@ -1,12 +1,10 @@
 import * as React from "react";
-import { useState } from "react";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
-
 import Logo from "../images//idaho_spudsman_logo.svg";
 import { Link } from "gatsby";
 
@@ -26,13 +24,11 @@ const socialMedias = [
     },
 ];
 
-
 function Footer() {
     return (
         <footer>
             <Container sx={{ mt: 2, pt: 2, pb: 2, alignItems: "center" }}>
                 <Stack direction="column" spacing="{2}" justifyContent="center" alignItems="center">
-
                     <Link to="/">
                         <Container disableGutters sx={{
                             p: 0, m: 0,

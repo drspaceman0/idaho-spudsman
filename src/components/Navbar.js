@@ -1,17 +1,15 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
-import Stack from "@mui/material/Container";
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
-import SearchIcon from "@mui/icons-material/Search";
-import MenuIcon from "@mui/icons-material/Menu";
+// import SearchIcon from "@mui/icons-material/Search";
+// import MenuIcon from "@mui/icons-material/Menu";
 
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -46,19 +44,14 @@ function getTabVal(path) {
   switch (path) {
     case "/":
       return 0;
-      break;
     case "/tag/local":
       return 1;
-      break;
     case "/tag/national":
       return 2;
-      break;
     case "/tag/sports":
       return 3;
-      break;
     default:
       return false;
-      break;
   }
 }
 
@@ -105,8 +98,8 @@ const Navbar = (props) => {
                 {/* social media links  */}
                 {
                   socialMedias.map((item, index) => (
-                    <Grid item xs={4} style={{ textAlign: 'right' }}>
-                      <a key={index} href={item.href}  >
+                    <Grid key={index} item xs={4} style={{ textAlign: 'right' }}>
+                      <a href={item.href} >
                         {item.icon}
                       </a>
                     </Grid>

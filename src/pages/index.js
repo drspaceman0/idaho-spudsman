@@ -1,6 +1,5 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import Home from "./home";
 
 
@@ -20,9 +19,6 @@ function formatData(d) {
 export default function IndexPage({ data, location: { pathname } }) {
   const articles = formatData(data.articles);
   const prints = formatData(data.prints);
-
-  console.log(articles)
-  console.log(prints)
 
   return (
     <>

@@ -9,7 +9,6 @@ const indexArticle = (index, tag, article) => {
 exports.createPages = async ({ actions, graphql }) => {
     const { createPage } = actions;
     const articleIndex = {};
-    console.log("RUNNING QUERY")
 
     // query all articles and get their tags and slugs
     return graphql(`

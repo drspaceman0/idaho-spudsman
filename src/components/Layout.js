@@ -1,9 +1,7 @@
 import * as React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
 import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-import { Container, Grid } from "@mui/material";
+import Container from "@mui/material/Container";
 import { Seo } from '../components/seo.js';
 
 import {
