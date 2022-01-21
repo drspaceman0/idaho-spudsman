@@ -49,7 +49,7 @@ function Sidebar({ prints }) {
           </Typography>
           <Typography sx={{ textAlign: 'left', lineHeight: '1.65' }} variant="subtitle1">
             Idaho Spudsman is non-affiliated newsletter made by a group of talented satire writers and Eric.
-            Have a headline for us? <a href="idahospudsman@gmail.com" style={linkStyles} >Submit here</a>
+            Have a headline for us? <a href="mailto:idahospudsman@gmail.com" style={linkStyles} >Submit here</a>
           </Typography>
         </Paper>
       </Container>

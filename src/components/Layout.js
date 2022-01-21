@@ -7,7 +7,7 @@ import { Seo } from '../components/seo.js';
 // import SearchIcon from "@mui/icons-material/Search";
 // import MenuIcon from "@mui/icons-material/Menu";
 import TwitterIcon from '@mui/icons-material/Twitter';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 import {
@@ -103,8 +103,8 @@ const socialMedias = [
         icon: <FacebookIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
     },
     {
-        href: "https://github.com/drspaceman0",
-        icon: <GitHubIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
+        href: "mailto:idahospudsman@gmail.com",
+        icon: <MailOutlineIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
     },
 ];
 
