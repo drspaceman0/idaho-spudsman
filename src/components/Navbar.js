@@ -8,12 +8,6 @@ import Container from "@mui/material/Container";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
-// import SearchIcon from "@mui/icons-material/Search";
-// import MenuIcon from "@mui/icons-material/Menu";
-
-import TwitterIcon from '@mui/icons-material/Twitter';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import { Link } from "gatsby";
 
 import Logo from "../images//idaho_spudsman_logo.svg";
@@ -23,21 +17,6 @@ const pages = [
   { title: "Local", url: "/tag/local" },
   { title: "National", url: "/tag/national" },
   { title: "Sports", url: "/tag/sports" },
-];
-
-const socialMedias = [
-  {
-    href: "https://twitter.com/ISpudsman",
-    icon: <TwitterIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
-  },
-  {
-    href: "#",
-    icon: <FacebookIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
-  },
-  {
-    href: "https://github.com/drspaceman0",
-    icon: <GitHubIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
-  },
 ];
 
 function getTabVal(path) {
@@ -60,6 +39,7 @@ const Navbar = (props) => {
   const handleChange = (event, newValue) => {
     setTabVal(newValue);
   };
+  const socialMedias = props.socialMedias;
 
   return (
     <header>

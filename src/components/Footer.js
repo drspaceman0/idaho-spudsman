@@ -8,23 +8,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import Logo from "../images//idaho_spudsman_logo.svg";
 import { Link } from "gatsby";
 
-
-const socialMedias = [
-    {
-        href: "https://twitter.com/ISpudsman",
-        icon: <TwitterIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
-    },
-    {
-        href: "#",
-        icon: <FacebookIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
-    },
-    {
-        href: "https://github.com/drspaceman0",
-        icon: <GitHubIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
-    },
-];
-
-function Footer() {
+function Footer(props) {
+    const socialMedias = props.socialMedias;
     return (
         <footer>
             <Container sx={{ mt: 2, pt: 2, pb: 2, alignItems: "center" }}>

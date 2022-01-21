@@ -4,6 +4,12 @@ import Footer from "./Footer";
 import Container from "@mui/material/Container";
 import { Seo } from '../components/seo.js';
 
+// import SearchIcon from "@mui/icons-material/Search";
+// import MenuIcon from "@mui/icons-material/Menu";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import FacebookIcon from '@mui/icons-material/Facebook';
+
 import {
     ThemeProvider,
     createTheme,
@@ -87,6 +93,22 @@ const theme = createTheme({
     },
 });
 
+const socialMedias = [
+    {
+        href: "https://twitter.com/ISpudsman",
+        icon: <TwitterIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
+    },
+    {
+        href: "#",
+        icon: <FacebookIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
+    },
+    {
+        href: "https://github.com/drspaceman0",
+        icon: <GitHubIcon color="primary" sx={{ transition: 'opacity 0.2s', opacity: '1', '&:hover': { opacity: '0.7' }, }} />
+    },
+];
+
+
 const childrenContainerStyles = {
     borderTop: '1px solid #dcdcdc',
     borderBottom: '1px solid #dcdcdc',
@@ -113,12 +135,12 @@ export default function Layout({
             <Seo title={title} description={description} image={image} path={path} />
             <ThemeProvider theme={myTheme}>
                 <Container maxWidth="md">
-                    <Navbar path={path} />
+                    <Navbar path={path} socialMedias={socialMedias} />
                     {/* <Container sx={{ px: { xs: 1, md: 6 } }}> */}
                     <Container disableGutters sx={childrenContainerStyles}>
                         <main>{children}</main>
                     </Container>
-                    <Footer />
+                    <Footer socialMedias={socialMedias} />
                 </Container >
             </ThemeProvider>
         </>
