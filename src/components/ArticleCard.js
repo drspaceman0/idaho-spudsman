@@ -30,7 +30,7 @@ function ArticleCard(props) {
             {post.title}
           </Typography>
 
-          <GatsbyImage image={post.image.gatsbyImageData} alt={post.title} style={{ borderTop: '3px solid #f17720' }} />
+          <GatsbyImage image={post.image.gatsbyImageData} alt={post.title} style={{ borderTop: '6px solid #f17720' }} />
           <Typography variant="subtitle1">{post.textPreview}</Typography>
         </Box>
       </Link>
