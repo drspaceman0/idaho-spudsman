@@ -25,7 +25,7 @@ function PrintCards(props) {
                     <Box sx={{ position: 'relative' }}>
                         <CardMedia
                             component="img"
-                            sx={{ maxWidth: 280, maxHeight: 145 }}
+                            sx={{ maxWidth: { sm: 280 }, maxHeight: { sm: 145 } }}
                             image={post.image.gatsbyImageData.images.fallback.src}
                         />
                         <Box
@@ -36,10 +36,10 @@ function PrintCards(props) {
                                 width: '100%',
                                 bgcolor: 'rgba(0, 0, 0, 0.54)',
                                 color: 'white',
-                                padding: '10px',
+
                             }}
                         >
-                            <Typography className="title" variant="subtitle2" color="white">{post.title}</Typography>
+                            <Typography className="title" variant="subtitle2" color="white" sx={{ padding: '10px', }}>{post.title}</Typography>
                         </Box>
                     </Box>
                 </Card>
