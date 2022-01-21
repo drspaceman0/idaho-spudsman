@@ -12,6 +12,7 @@ function PrintCards(props) {
     if (!post) {
         return null;
     }
+    const cardImage = post.image.gatsbyImageData.images.fallback.src;
     return (
         <Box sx={{
             py: 1,
@@ -20,27 +21,30 @@ function PrintCards(props) {
             },
         }}>
             <Link to={post.slug} component={GatsbyLink} underline="none" >
-                <Card square >
-                    <Box sx={{ position: 'relative' }}>
-                        <CardMedia
-                            component="img"
-                            sx={{ maxWidth: { sm: 280 }, maxHeight: { sm: 145 } }}
-                            image={post.image.gatsbyImageData.images.fallback.src}
-                        />
-                        <Box
-                            sx={{
-                                position: 'absolute',
-                                bottom: 0,
-                                left: 0,
-                                width: '100%',
-                                bgcolor: 'rgba(0, 0, 0, 0.54)',
-                                color: 'white',
+                <Box className="printCard"
+                    sx={{
+                        backgroundImage: `url(${cardImage})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        position: 'relative',
+                        minHeight: 145,
+                        maxWidth: { sm: 280 },
+                        maxHeight: { sm: 145 },
+                    }}>
+                    <Box
+                        className="textOverlayContainer"
+                        sx={{
+                            position: 'absolute',
+                            bottom: 0,
+                            left: 0,
+                            width: '100%',
+                            bgcolor: 'rgba(0, 0, 0, 0.54)',
+                            color: 'white',
 
-                            }}>
-                            <Typography className="title" variant="subtitle2" color="white" sx={{ padding: '10px', }}>{post.title}</Typography>
-                        </Box>
+                        }}>
+                        <Typography className="title" variant="subtitle2" color="white" sx={{ padding: '10px', }}>{post.title}</Typography>
                     </Box>
-                </Card>
+                </Box>
             </Link>
         </Box>
     );
