@@ -30,6 +30,12 @@ query($id: String!) {
   }
   `;
 
+const articleContainerStyles = {
+    width: '156%',
+    left: '-28%',
+    mx: "auto",
+    maxWidth: 820,
+}
 export default function ContentfulArticle({ data, location: { pathname }, }) {
     const post = data.contentfulArticle;
     const isHeadlineOnly = (!post.text);
@@ -48,14 +54,14 @@ export default function ContentfulArticle({ data, location: { pathname }, }) {
             }
             `}</style>
             <article >
-                <Box sx={{ mx: "auto", maxWidth: 820 }}>
+                <Box sx={articleContainerStyles}>
                     <Typography variant="h2" sx={{
                         py: 2,
 
                     }}>
                         {post.title}
                     </Typography>
-                    <GatsbyImage image={post.image.gatsbyImageData} aspectRatio={1200 / 640} alt={post.title} layout="fullWidth" style={{ borderTop: '6px solid #f17720' }} />
+                    <GatsbyImage image={post.image.gatsbyImageData} alt={post.title} layout="fullWidth" style={{ borderTop: '6px solid #f17720' }} />
                     <Typography variant="caption" >
                         {post.dateCreated} | By Idaho Spudsman Staff
                     </Typography>

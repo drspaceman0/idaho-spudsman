@@ -76,8 +76,7 @@ const theme = createTheme({
         },
         body1: {
             fontWeight: 500,
-            fontSize: "18px",
-            lineHeight: 2,
+            fontSize: "17px",
             color: "#000",
         },
         body2: {
