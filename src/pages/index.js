@@ -58,7 +58,10 @@ export const query = graphql`
         slug
         dateCreated(formatString: "DD MMMM, YYYY")
         image {
-          gatsbyImageData(placeholder: DOMINANT_COLOR)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: DOMINANT_COLOR
+          )
         }
         description
       }
