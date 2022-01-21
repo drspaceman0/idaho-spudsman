@@ -13,7 +13,7 @@ exports.createPages = async ({ actions, graphql }) => {
     // query all articles and get their tags and slugs
     return graphql(`
         {
-        allContentfulArticle(filter: {tags: {eq: "local"}}) {
+        allContentfulArticle {
           edges {
             node { 
               tags

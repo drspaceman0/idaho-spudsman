@@ -24,7 +24,6 @@ query($id: String!) {
     }
     authorName
     dateCreated(formatString: "DD MMMM, YYYY")
-    dateModified(formatString: "DD MMMM, YYYY")
     slug
     }
   }

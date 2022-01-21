@@ -6,8 +6,11 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 
 export const query = graphql`
-    query($tag: String!) {
-    allContentfulArticle(filter: {tags: {eq: $tag}}) {
+    query($tag: String!) { 
+    allContentfulArticle(
+        sort: {fields: dateCreated, order: DESC}
+        filter: {tags: {eq: $tag}}
+    ) {
         edges {
             node {
                 title
@@ -18,8 +21,7 @@ export const query = graphql`
                     gatsbyImageData(placeholder: DOMINANT_COLOR)
                 }
                 authorName
-                dateCreated(formatString: "DD MMMM, YYYY")
-                dateModified(formatString: "DD MMMM, YYYY")
+                dateCreated(formatString: "DD MMMM, YYYY") 
                 slug
             }
         }
