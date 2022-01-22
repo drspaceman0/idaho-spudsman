@@ -115,6 +115,16 @@ const childrenContainerStyles = {
     paddingBottom: '12px',
 };
 
+
+function showMessageForHire() {
+    console.log("***** ");
+    console.log("NEED A WEB DEVELOPER? ");
+    console.log("freelance | contract-for-hire | full-time | part-time ");
+    console.log("github: @drspaceman0 ");
+    console.log("linkedin: @eric-marsh-415b1b112 ");
+    console.log("***** ");
+}
+
 export default function Layout({
     children,
     title = "",
@@ -123,6 +133,8 @@ export default function Layout({
     path = "",
 }) {
     const myTheme = responsiveFontSizes(theme);
+
+    showMessageForHire();
 
     return (
         <>
