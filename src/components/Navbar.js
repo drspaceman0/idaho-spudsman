@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -58,19 +59,21 @@ const Navbar = (props) => {
               {/* <MenuIcon /> */}
             </IconButton>
           </Grid>
-          <Grid item xs={6} >
-            <Link to="/">
-              <Container disableGutters sx={{
-                p: 0, m: 0, textAlign: 'center',
-                transition: 'opacity 0.2s',
-                opacity: '1',
-                '&:hover': {
-                  opacity: '0.7'
-                },
-              }}>
-                <img src={Logo} alt="Idaho Spudsman Logo" />
-              </Container>
-            </Link>
+          <Grid item xs={6} sx={{ textAlign: 'center', }}>
+            <Container disableGutters sx={{
+              p: 0, m: 0, display: 'flex', justifyContent: 'center',
+              transition: 'opacity 0.2s',
+              opacity: '1',
+              '&:hover': {
+                opacity: '0.7'
+              },
+            }}>
+              <Box sx={{ width: 225, height: 69, textAlign: 'center', }}>
+                <Link to="/">
+                  <img src={Logo} alt="Idaho Spudsman Logo" />
+                </Link>
+              </Box>
+            </Container>
           </Grid>
           <Grid item xs>
             <Container disableGutters sx={{ width: 104, display: { xs: 'none', sm: 'block' } }} >
