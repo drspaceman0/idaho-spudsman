@@ -109,12 +109,6 @@ const socialMedias = [
 ];
 
 
-const childrenContainerStyles = {
-    borderTop: '1px solid #dcdcdc',
-    borderBottom: '1px solid #dcdcdc',
-    paddingBottom: '12px',
-};
-
 
 function showMessageForHire() {
     console.log("***** ");
@@ -146,10 +140,10 @@ export default function Layout({
           `}</style>
             <Seo title={title} description={description} image={image} path={path} />
             <ThemeProvider theme={myTheme}>
-                <Container maxWidth="md">
+                <Container maxWidth="lg" >
                     <Navbar path={path} socialMedias={socialMedias} />
                     {/* <Container sx={{ px: { xs: 1, md: 6 } }}> */}
-                    <Container disableGutters sx={childrenContainerStyles}>
+                    <Container disableGutters sx={{ borderTop: '1px solid #dcdcdc', borderBottom: '1px solid #dcdcdc', paddingBottom: '12px', px: { xs: 2, md: 4 }, }}>
                         <main>{children}</main>
                     </Container>
                     <Footer socialMedias={socialMedias} />

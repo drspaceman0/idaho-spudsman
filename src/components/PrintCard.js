@@ -28,8 +28,6 @@ function PrintCards(props) {
                         backgroundSize: 'cover',
                         position: 'relative',
                         minHeight: 145,
-                        maxWidth: { sm: 280 },
-                        maxHeight: { sm: 145 },
                     }}>
                     <Box
                         className="textOverlayContainer"

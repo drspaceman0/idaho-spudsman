@@ -30,10 +30,7 @@ query($id: String!) {
   `;
 
 const articleContainerStyles = {
-    width: '156%',
-    left: '-28%',
     mx: "auto",
-    maxWidth: 820,
 }
 export default function ContentfulArticle({ data, location: { pathname }, }) {
     const post = data.contentfulArticle;
