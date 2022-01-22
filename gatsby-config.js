@@ -33,5 +33,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-twitter",
+    "gatsby-plugin-netlify",
   ],
 };
