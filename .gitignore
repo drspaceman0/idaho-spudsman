@@ -6,3 +6,4 @@ package-lock.json
 .netlify
 .env.production
 .env.development
+netlify.toml
