@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://idaho-spudsman.netlify.app/",
+    siteUrl: "https://www.idahospudsman.com/",
     title: "Idaho Spudsman",
     description: "Real Fake News For The Fake Real Idahoan",
     image: "https://images.ctfassets.net/y5a0adklapc1/5EvHT2CIKaMCn7MgGLuLXu/520b2fe70c570c6d6f07fb4a4b9d1a97/idaho-spudsman.jpg",
@@ -17,6 +17,12 @@ module.exports = {
         name: "images",
         path: `${__dirname}/src/images/`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon": "src/images/favicon.png"
+      }
     },
     {
       resolve: `gatsby-source-contentful`,
